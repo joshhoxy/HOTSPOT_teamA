@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.se_project">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="Hot Spot"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <meta-data android:name="com.kakao.sdk.AppKey"
+            android:value="f4714c39d9881199ca670bff6d9b1a23"/>
+
+        <activity android:name=".LoginActivity"
+            android:theme="@style/loginTheme"
+            android:screenOrientation="portrait"> <!-- 세로고정 -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/loginTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".MapActivity"/>
+        <activity android:name=".DaumWebViewActivity"/>
+    </application>
+
+</manifest>
